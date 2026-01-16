@@ -1,0 +1,87 @@
+╔═══════════════════════════════════════════════════════════════╗
+║           FastFood Application - Running Instructions         ║
+╚═══════════════════════════════════════════════════════════════╝
+
+📦 STEP 1: Install Dependencies (First Time Only)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Open terminal in the fast-food-app folder and run:
+
+    npm install
+    npm run server:install
+
+This installs all required packages for both Next.js and Express.
+
+
+🚀 STEP 2: Start the Express Server
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Open Terminal #1 and run:
+
+    npm run server
+
+✓ Server will start on: http://localhost:5000
+✓ Keep this terminal running!
+
+
+🌐 STEP 3: Start the Next.js Application
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Open Terminal #2 (new terminal) and run:
+
+    npm run dev
+
+✓ App will start on: http://localhost:3000
+✓ Open this URL in your browser!
+
+
+🔐 STEP 4: Login Credentials
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+To access protected features (Add Item page):
+
+    Email:    admin@fastfood.com
+    Password: admin123
+
+
+✅ WHAT TO TEST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Landing Page (/)
+   - Browse 7 sections: Hero, About, Featured, Benefits, 
+     Categories, Testimonials, Call-to-Action
+
+2. Menu Page (/items)
+   - View all food items
+   - Click any item to see details
+
+3. Item Details (/items/[id])
+   - See full product information
+   - View large image and description
+
+4. Login (/login)
+   - Use credentials above to login
+
+5. Add Item (/add-item) - PROTECTED
+   - Only accessible after login
+   - Add new menu items
+   - See success toast notification
+
+
+🛠️ TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Problem: Items not showing on menu page
+Solution: Make sure Express server is running (Terminal #1)
+
+Problem: Can't access Add Item page
+Solution: Login first using the credentials above
+
+Problem: Port already in use
+Solution: 
+  - For Next.js: npm run dev -- -p 3001
+  - For Express: Edit server/server.js, change PORT value
+
+
+📚 DOCUMENTATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- README.md        - Full project documentation
+- QUICK_START.md   - Quick setup guide
+- FEATURES.md      - Detailed features overview
+
+
+🎉 Enjoy your FastFood application!
