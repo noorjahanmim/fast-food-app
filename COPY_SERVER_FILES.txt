@@ -1,0 +1,120 @@
+╔═══════════════════════════════════════════════════════════════╗
+║              Deploy Express Server to Railway                ║
+╚═══════════════════════════════════════════════════════════════╝
+
+🚀 STEP 1: Create Server Repository Folder
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Create a new folder outside your current project:
+
+mkdir C:\Assignment\nextJsPractice\fast-food-server
+cd C:\Assignment\nextJsPractice\fast-food-server
+
+
+📁 STEP 2: Copy These Files
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Copy these files from fast-food-app\server\ to fast-food-server\:
+
+✓ server.js          (Main server file)
+✓ package.json       (Dependencies)
+✓ railway.json       (Railway config)
+✓ .gitignore         (Git ignore rules)
+✓ deploy-to-railway.md (Instructions)
+
+You can copy-paste or drag and drop these files.
+
+
+🔧 STEP 3: Initialize Git Repository
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+cd C:\Assignment\nextJsPractice\fast-food-server
+
+git init
+git add .
+git commit -m "Initial server commit"
+
+
+📤 STEP 4: Push to GitHub
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Go to: https://github.com/new
+2. Repository name: fast-food-server
+3. Click "Create repository"
+4. Run these commands (replace YOUR_USERNAME):
+
+git remote add origin https://github.com/YOUR_USERNAME/fast-food-server.git
+git branch -M main
+git push -u origin main
+
+
+🚀 STEP 5: Deploy to Railway
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Go to: https://railway.app
+2. Login with GitHub
+3. Click "New Project"
+4. Select "Deploy from GitHub repo"
+5. Choose "fast-food-server"
+6. Click "Deploy"
+7. Wait 2-3 minutes...
+8. DONE! Your API is live! 🎉
+
+
+🔗 STEP 6: Get Your Railway URL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+After deployment, Railway will give you a URL like:
+https://fast-food-server-production-xxxx.up.railway.app
+
+Test it by visiting:
+https://your-url.railway.app/health
+
+
+⚙️ STEP 7: Update Next.js App
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Edit fast-food-app\.env.local:
+
+NEXT_PUBLIC_API_URL=https://your-railway-url.railway.app
+
+Then restart your Next.js app:
+npm run dev
+
+
+✅ WHAT'S CONFIGURED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Server uses Railway's PORT environment variable
+✓ CORS configured for Vercel and Railway domains
+✓ Health check endpoint at /health
+✓ Automatic deployments on git push
+✓ Node.js version specified
+
+
+🎯 FINAL RESULT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Your Express API will be live at:
+https://your-app-name.railway.app
+
+API Endpoints:
+• /health - Server status
+• /api/items - Get all food items
+• /api/items/:id - Get single item
+• POST /api/items - Add new item
+
+
+🆘 TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Problem: Build fails on Railway
+Solution: Check logs in Railway dashboard
+
+Problem: CORS errors
+Solution: Server is pre-configured for common domains
+
+Problem: Can't access API
+Solution: Make sure Railway deployment succeeded
+
+Problem: Health check fails
+Solution: Visit /health endpoint to test
+
+
+📚 MORE HELP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+See RAILWAY_DEPLOYMENT.md for detailed instructions
+See deploy-to-railway.md for quick CLI steps
+
+
+🎉 Your Express server will be live on the internet!

@@ -20,17 +20,17 @@ const chefs = [
   {
     name: 'David Liam',
     role: 'CEO',
-    image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500&q=80',
+    image: 'https://www.eu-startups.com/wp-content/uploads/2022/10/Screen-Shot-2022-10-07-at-10.20.42.png',
   },
   {
     name: 'Alex Mika',
     role: 'Executive Chef',
-    image: 'https://images.unsplash.com/photo-1595273670150-db0a3d39074c?w=500&q=80',
+    image: 'https://i0.wp.com/www.foodandwinegazette.com/wp-content/uploads/2015/04/cuisiner_3.jpg',
   },
   {
     name: 'John Smith',
     role: 'Executive Chef',
-    image: 'https://images.unsplash.com/photo-1577214714282-3e45380735e5?w=500&q=80',
+    image: 'https://www.aperitif.com/wp-content/uploads/2025/08/Types-of-Chefs-1024x971.png',
   },
 ];
 

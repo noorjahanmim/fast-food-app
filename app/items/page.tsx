@@ -13,7 +13,8 @@ interface Item {
 
 async function getItems(): Promise<Item[]> {
   try {
-    return await apiClient.get('/api/items');
+    const data = await apiClient.get('/api/items');
+    return data || [];
   } catch (error) {
     console.error('Error fetching items:', error);
     return [];
@@ -36,7 +37,7 @@ export default async function ItemsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((item) => (
             <div key={item.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
-              <div className="relative h-48 bg-gray-200">
+              <div className="relative h-80 bg-gray-200">
                 <Image
                   src={item.image}
                   alt={item.name}

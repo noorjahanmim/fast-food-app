@@ -14,7 +14,8 @@ interface Item {
 
 async function getItem(id: string): Promise<Item | null> {
   try {
-    return await apiClient.get(`/api/items/${id}`);
+    const data = await apiClient.get(`/api/items/${id}`);
+    return data;
   } catch (error) {
     console.error('Error fetching item:', error);
     return null;
